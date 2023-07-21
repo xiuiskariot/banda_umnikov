@@ -3,15 +3,17 @@
     <h1>Где бы нам пообедать?</h1>
     
     <div class="container">
+      <random-card/>
       <cafe-card v-for="cafe in cafes" :cafe="cafe" :key="cafe.id" />
     </div>
   </div>
 </template>
 <script>
 import CafeCard from "./components/CafeCard.vue";
+import RandomCard from "./components/RandomCard.vue";
 import axios from "axios";
 export default {
-  components: { CafeCard },
+  components: { CafeCard, RandomCard },
   data() {
     return {
       cafes: [],
@@ -23,7 +25,6 @@ export default {
         "https://bandaumnikov.ru/api/test/site/get-index"
       );
       this.cafes = response.data.data;
-      console.log(response);
     },
   },
   mounted() {
