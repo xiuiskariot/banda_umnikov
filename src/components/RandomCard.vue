@@ -6,7 +6,7 @@
     </div>
 
     <div class="card_info">
-      <p class="card_info_name">{{ cafe.name.toUpperCase() }}</p>
+      <p class="card_info_name">{{ cafe.name }}</p>
 
       <div class="card_info_cuisine">
         <p>Кухня:&nbsp;</p>
@@ -28,7 +28,7 @@
           <p>⏱ идти примерно минут {{ cafe.time }} ({{ cafe.distance }} м)</p>
         </div>
       </div>
-      <!-- <button @click="fetchRandom">Мне повезет</button> -->
+      <button @click="fetchRandom">Мне повезет</button>
     </div>
   </div>
 </template>
@@ -44,13 +44,13 @@ export default {
   },
   methods: {
     async fetchRandom() {
-      // const response1 = await axios.get(
-      //   "https://bandaumnikov.ru/api/test/site/get-index"
-      // );
-      // const dataLength = response1.data.data.dataLength;
-      // const randomId = Math.floor(Math.random() * dataLength);
+      const response1 = await axios.get(
+        "https://bandaumnikov.ru/api/test/site/get-index"
+      );
+      const dataLength = response1.data.data.dataLength;
+      const randomId = Math.floor(Math.random() * dataLength);
 
-      const response2 = await axios.get(`https://bandaumnikov.ru/api/test/site/get-view?id=5`)
+      const response2 = await axios.get(`https://bandaumnikov.ru/api/test/site/get-view?id=${randomId}`)
 
       this.cafe = response2.data.data
     },

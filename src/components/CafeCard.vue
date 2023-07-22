@@ -6,11 +6,11 @@
     </div>
 
     <div class="card_info">
-      <p class="card_info_name">{{ cafe.name.toUpperCase() }}</p>
+      <p class="card_info_name">{{ cafe.name }}</p>
 
       <div class="card_info_cuisine">
-        <p>Кухня:&nbsp; </p>
-        <div v-if="cafe.cuisine"> {{ cafe.cuisine }}</div>
+        <p>Кухня:&nbsp;</p>
+        <div v-if="cafe.cuisine">{{ cafe.cuisine }}</div>
         <div v-else>неизвестно :с</div>
       </div>
 
@@ -41,7 +41,7 @@ export default {
   },
 };
 </script>
-<style >
+<style>
 .pic {
   height: 100%;
 }

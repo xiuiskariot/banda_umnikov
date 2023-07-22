@@ -1,35 +1,17 @@
 <template>
   <div>
     <h1>Где бы нам пообедать?</h1>
-    
+
     <div class="container">
-      <random-card/>
-      <cafe-card v-for="cafe in cafes" :cafe="cafe" :key="cafe.id" />
+      <cafe-list />
     </div>
   </div>
 </template>
 <script>
-import CafeCard from "./components/CafeCard.vue";
-import RandomCard from "./components/RandomCard.vue";
-import axios from "axios";
+import CafeList from "./components/CafeList.vue";
+
 export default {
-  components: { CafeCard, RandomCard },
-  data() {
-    return {
-      cafes: [],
-    };
-  },
-  methods: {
-    async fetchCafes() {
-      const response = await axios.get(
-        "https://bandaumnikov.ru/api/test/site/get-index"
-      );
-      this.cafes = response.data.data;
-    },
-  },
-  mounted() {
-    this.fetchCafes();
-  },
+  components: { CafeList },
 };
 </script>
 <style>
