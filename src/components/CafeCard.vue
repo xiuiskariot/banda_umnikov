@@ -84,4 +84,43 @@ img {
 .card_info_lunch {
   margin-bottom: 7px;
 }
+
+@media (max-width: 769px) {
+  .card {
+    width: 500px;
+  }
+
+  img {
+    height: 199px;
+    width: 200px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  .card {
+    width: 400px;
+    height: 172px;
+    
+  }
+
+  .card_info {
+    font-size: 10px;
+  }
+
+  img {
+    height: 170px;
+    width: 180px;
+    border-radius: 10px 0 0 10px;
+  }
+}
+
+@media (max-width: 568px) {
+  .card {
+    width: 370px;
+    height: 174px;
+    gap: 1rem
+    
+  }
+}
 </style>
