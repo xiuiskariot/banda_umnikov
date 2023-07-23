@@ -1,18 +1,12 @@
 <template>
-  <div>
-    <my-header/>
-    <router-view
-      ><div class="container">
-        <cafe-list /></div
-    ></router-view>
-  </div>
+  <my-header />
+  <div class="container"><router-view /></div>
+  
 </template>
 <script>
-import CafeList from "../src/views/CafeList";
-import MyHeader from './components/MyHeader.vue'
-
+import MyHeader from "./components/MyHeader.vue";
 export default {
-  components: { CafeList, MyHeader },
+  components: { MyHeader },
 };
 </script>
 <style>
@@ -28,6 +22,7 @@ export default {
 
 body {
   font-family: var(--font);
+  background: rgb(199, 229, 199);
 }
 
 h1 {

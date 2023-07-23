@@ -1,46 +1,7 @@
-// import Vue from "vue";
-// import VueRouter from "vue-router";
-
-// import CafeList from "./views/CafeList.vue";
-// import CafeCard from "./views/CafeCard.vue";
-// Vue.use(VueRouter);
-
-
-// const routes = [
-//   {
-//     path: "/",
-//     component: CafeList,
-//   },
-//   {
-//     path: "/cafe/:id", // Динамический сегмент в URL, позволяющий передавать уникальный идентификатор карточки
-//     component: CafeCard,
-//   },
-// ];
-
-// const router = new VueRouter({
-//   routes,
-// });
-
-// export default router;
-
-// Vue.use(VueRouter);
-
-// const routes = [
-//   { path: '/', component: CafeList },
-//   { path: '/cafe/:cafeId', component: Cafe, props: true }
-// ];
-
-// const router = new VueRouter({
-//   routes
-// });
-
-// export default router;
-
-
 import { createRouter, createWebHistory } from "vue-router";
-import ListView from "../views/HomeView.vue";
+import ListView from "../views/ListView.vue";
 
-import CardView from "../views/PlaceView.vue";
+import CardLinkView from "../views/CafeLinkView.vue";
 
 const routes = [
   {
@@ -51,7 +12,7 @@ const routes = [
   {
     path: "/:id",
     name: "placeItem",
-    component: CardView,
+    component: CardLinkView,
     props: true,
   },
 ];

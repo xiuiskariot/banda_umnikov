@@ -44,7 +44,7 @@ export default {
     }
   },
   props: {
-    place: {
+    cafe: {
       type: Object,
       required: true,
     },
@@ -74,6 +74,7 @@ img {
   height: 219px;
   width: 250px;
   border-radius: 10px 0 0 10px;
+  object-fit: cover;
 }
 .card {
   display: grid;
