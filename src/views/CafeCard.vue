@@ -28,17 +28,31 @@
           <p>⏱ идти примерно минут {{ cafe.time }} ({{ cafe.distance }} м)</p>
         </div>
       </div>
+      <button @click="$router.push(`/${cafe.id}`)">Поделиться</button>
     </div>
+    
   </div>
 </template>
 <script>
+import Places from '@/indexAPI';
 export default {
   props: {
     cafe: {
       type: Object,
       required: true,
     },
+    
   },
+  methods: {
+    async fetchCafe() {
+      const placeID = this.$route.params.id;
+      const response = await Places.getOne(placeID);
+      this.onePlace = response;
+    }
+  }
+  , mounted() {
+    this.fetchCafe()
+  }
 };
 </script>
 <style>
@@ -115,11 +129,12 @@ img {
   }
 }
 
-@media (max-width: 568px) {
+@media (max-width: 400px) {
   .card {
     width: 370px;
     height: 174px;
-    gap: 1rem
+    gap: 1rem;
+    
     
   }
 }

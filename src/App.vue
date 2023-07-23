@@ -1,17 +1,18 @@
 <template>
   <div>
-    <h1>Где бы нам пообедать?</h1>
-
-    <div class="container">
-      <cafe-list />
-    </div>
+    <my-header/>
+    <router-view
+      ><div class="container">
+        <cafe-list /></div
+    ></router-view>
   </div>
 </template>
 <script>
-import CafeList from "./components/CafeList.vue";
+import CafeList from "../src/views/CafeList";
+import MyHeader from './components/MyHeader.vue'
 
 export default {
-  components: { CafeList },
+  components: { CafeList, MyHeader },
 };
 </script>
 <style>

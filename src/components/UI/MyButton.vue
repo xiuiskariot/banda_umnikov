@@ -4,7 +4,9 @@
   </button>
 </template>
 <script>
-export default {};
+export default {
+  name: "my-button",
+};
 </script>
 <style scoped>
 .btn {
@@ -15,6 +17,7 @@ export default {};
   margin: 1rem;
   cursor: pointer;
   transition: 0.3s;
+  background: rgb(245, 235, 238);
 }
 
 .btn:hover {
