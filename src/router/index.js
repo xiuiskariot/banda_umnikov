@@ -38,17 +38,21 @@
 
 
 import { createRouter, createWebHistory } from "vue-router";
-import CardList from "../views/CafeList.vue";
-import CafeCard from "../views/CafeCard.vue";
+import ListView from "../views/HomeView.vue";
+
+import CardView from "../views/PlaceView.vue";
 
 const routes = [
   {
     path: "/",
-    component: CardList,
+    component: ListView,
   },
+
   {
     path: "/:id",
-    component: CafeCard,
+    name: "placeItem",
+    component: CardView,
+    props: true,
   },
 ];
 
