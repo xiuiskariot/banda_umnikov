@@ -153,7 +153,7 @@ img {
   }
 
   img {
-    height: 172px;
+    height: 169px;
     width: 180px;
     border-radius: 10px 0 0 10px;
   }
